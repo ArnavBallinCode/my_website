@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target); // Stop observing once the section has faded in
             }
         });
     };
