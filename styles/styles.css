@@ -1,46 +1,96 @@
-/* Tailwind CSS doesn't require custom styles for basic setups as it is utility-based. */
-/* Add this CSS file only if you want to extend Tailwind's default configuration or include custom styles. */
-
-/* Example of extending Tailwind styles */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom Classes */
-.custom-button {
-    @apply bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition;
+/* Smooth transition for dark mode toggle */
+.transition-colors {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.custom-card {
-    @apply bg-white shadow-lg p-6 rounded-lg hover:shadow-xl transition dark:bg-gray-800 dark:text-white;
-}
-
+/* Custom section padding and spacing */
 .custom-section {
-    @apply py-16 px-6 bg-gray-100 dark:bg-gray-900;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
 }
 
-.header {
-    @apply bg-blue-900 text-white dark:bg-gray-800;
+/* Smooth transition for card hover effects */
+.custom-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.footer {
-    @apply bg-blue-900 text-white py-6 dark:bg-gray-800;
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode customizations */
+.dark .custom-card {
+    background: #2D3748; /* Dark background for cards */
+    color: #CBD5E0; /* Light text for readability */
+}
+
+.dark .custom-card:hover {
+    background: #4A5568; /* Slightly lighter dark background */
 }
 
 .dark-toggle {
-    @apply cursor-pointer p-2 text-lg rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: inherit;
+    padding: 0;
+    margin-left: 1rem;
 }
 
-/* Animations */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Hero section styles */
+.hero-section {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-.fade-in {
-    animation: fade-in 0.5s ease-in-out;
+.hero-section .btn-resume {
+    background-color: white;
+    color: #3182ce;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .btn-resume:hover {
+    background-color: #e2e8f0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation styles */
+nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #4c51bf;
+    color: white;
+}
+
+.dark .hero-section {
+    background-color: #2d3748; /* Darker background for hero section */
+}
+
+.dark .footer {
+    background-color: #2d3748; /* Dark footer background */
 }
