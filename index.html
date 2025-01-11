@@ -1,62 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Angarkar - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script>
+        // Toggle dark mode
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
 </head>
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors">
-    <header class="py-6 fixed w-full z-10 bg-opacity-80 backdrop-blur-lg">
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-all">
+
+    <header class="fixed top-0 left-0 w-full p-6 bg-white dark:bg-gray-900 shadow-md z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Arnav Angarkar</h1>
+            <h1 class="text-2xl font-bold">Arnav Angarkar</h1>
             <nav class="flex space-x-6">
                 <a href="#about" class="hover:underline">About</a>
                 <a href="#experience" class="hover:underline">Experience</a>
                 <a href="#projects" class="hover:underline">Projects</a>
                 <a href="#contact" class="hover:underline">Contact</a>
-                <button onclick="toggleDarkMode()" class="dark-toggle text-2xl">🌙</button>
+                <button onclick="toggleDarkMode()" class="text-xl">🌙</button>
             </nav>
         </div>
     </header>
 
-    <main class="overflow-hidden">
-        <!-- Full-Screen Sections with smooth fade transition -->
-        <section id="about" class="section fade-in flex items-center justify-center">
-            <div class="text-center">
-                <h2 class="text-4xl font-bold mb-4">About Me</h2>
-                <p class="text-xl">I am a first-year B.Tech student at IIIT Dharwad, passionate about technology and innovation.</p>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-32 bg-blue-600 text-white">
+            <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+            <p class="text-xl">Aspiring Computer Scientist | Web Developer | AI Enthusiast</p>
+            <a href="resume.pdf" target="_blank" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg">Download Resume</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section bg-gray-100 dark:bg-gray-800 py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">About Me</h2>
+                <p class="text-lg">I am a first-year B.Tech student at IIIT Dharwad, passionate about technology, web development, and AI.</p>
             </div>
         </section>
 
-        <section id="experience" class="section fade-in flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-            <div class="text-center">
-                <h2 class="text-4xl font-bold mb-4">Experience</h2>
-                <p class="text-xl">I've worked with ML/AI models, web development, and various research projects.</p>
+        <!-- Experience Section -->
+        <section id="experience" class="section py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">Experience</h2>
+                <div class="space-y-6">
+                    <div class="card p-6 bg-white dark:bg-gray-700 shadow-lg rounded-lg">
+                        <h3 class="text-xl font-semibold">ML/AI Intern - IISc Bangalore</h3>
+                        <p>December 2024 - Present</p>
+                        <p>Worked on a GoK DULT project, enhancing urban mobility solutions using ML models.</p>
+                    </div>
+                    <div class="card p-6 bg-white dark:bg-gray-700 shadow-lg rounded-lg">
+                        <h3 class="text-xl font-semibold">Research Intern - Vishwakosha</h3>
+                        <p>Fall 2024</p>
+                        <p>Redesigned and improved the Vishwakosha website for better accessibility and user experience.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="projects" class="section fade-in flex items-center justify-center bg-gray-200 dark:bg-gray-900">
-            <div class="text-center">
-                <h2 class="text-4xl font-bold mb-4">Projects</h2>
-                <p class="text-xl">Here are some of the projects I have worked on...</p>
+        <!-- Projects Section -->
+        <section id="projects" class="section py-20 bg-gray-100 dark:bg-gray-800">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-6 bg-white dark:bg-gray-700 shadow-lg rounded-lg">
+                        <h3 class="text-xl font-bold">Dynamic API for NoSQL Query</h3>
+                        <p>Developed an API for MongoDB supporting upsert operations and flexible data handling.</p>
+                    </div>
+                    <div class="card p-6 bg-white dark:bg-gray-700 shadow-lg rounded-lg">
+                        <h3 class="text-xl font-bold">Binary Classification Web App</h3>
+                        <p>Built a machine learning-powered web app for binary classification using Streamlit.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section fade-in flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-            <div class="text-center">
-                <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
-                <p class="text-xl">Feel free to reach out for collaborations or queries.</p>
+        <!-- Contact Section -->
+        <section id="contact" class="section py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+                <p class="mb-4">Feel free to reach out for collaborations or queries:</p>
+                <ul>
+                    <li>Email: <a href="mailto:arnav.angarkar20@gmail.com" class="text-blue-600 dark:text-blue-300">arnav.angarkar20@gmail.com</a></li>
+                    <li>GitHub: <a href="https://github.com/arnavballincode" target="_blank" class="text-blue-600 dark:text-blue-300">arnavballincode</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/arnav-angarkar" target="_blank" class="text-blue-600 dark:text-blue-300">arnav-angarkar</a></li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-white py-4 text-center">
-        <div class="container mx-auto">
-            &copy; 2024 Arnav Angarkar. All rights reserved.
-        </div>
+        &copy; 2024 Arnav Angarkar. All rights reserved.
     </footer>
+
+    <script>
+        // Scroll fade-in effect for sections
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
