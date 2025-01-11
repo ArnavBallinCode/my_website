@@ -1,4 +1,3 @@
-Here is a basic README file for your repository:
 
 ```markdown
 # Arnav Angarkar - Portfolio
