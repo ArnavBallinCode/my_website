@@ -1,55 +1,24 @@
-/* Full Screen Section Style */
-.section {
-    height: 100vh;
+/* Tailwind-based custom styles */
+.fade-in {
     opacity: 0;
-    transition: opacity 1s ease-out;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Fade-in effect */
-.fade-in {
+.fade-in.visible {
     opacity: 1;
 }
 
-/* Dark Mode Toggle Button */
-.dark-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: inherit;
-    padding: 0;
-    margin-left: 1rem;
+/* Custom Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Smooth Body Transition for Dark Mode */
-body {
-    transition: background-color 0.3s ease, color 0.3s ease;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust text color in dark mode */
-body.dark .text-gray-800 {
-    color: #CBD5E0;
-}
-
-/* Header Styling */
-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-}
-
-/* Make the text color dark enough in light mode and light enough in dark mode */
-body.dark .text-gray-800 {
-    color: #1A202C;
-}
-
-/* Section-specific text styles */
-section h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-section p {
-    font-size: 1.5rem;
-    color: inherit;
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
