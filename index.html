@@ -1,50 +1,100 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnav Angarkar (WIP) </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="home.css">
+    <title>Arnav Angarkar - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header>
-    <h1>Arnav Angarkar - (WIP)</h1>
-</header>
-
-<div class="container">
-    <!-- Main Image -->
-    <div class="main-image">
-        <img src="https://drive.usercontent.google.com/download?id=1zX6Y64lXDc9ny4pMO4f17Dw_s8AYoSQ2&export=view&authuser=0" alt="Arnav Angarkar">
-    </div>
-
-    <!-- Dropdown Buttons -->
-    <div class="dropdown-container">
-        <!-- Certifications -->
-        <div class="dropdown">
-            <button class="dropdown-btn" onclick="location.href='certifications.html'">Certifications</button>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Arnav Angarkar</h1>
+            <nav class="flex space-x-6">
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#experience" class="hover:underline">Experience</a>
+                <a href="#projects" class="hover:underline">Projects</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Achievements -->
-        <div class="dropdown">
-            <button class="dropdown-btn" onclick="location.href='achievements.html'">Achievements</button>
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-blue-700 text-white py-20 text-center">
+            <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+            <p class="text-xl">Aspiring Computer Scientist | Web Developer | AI Enthusiast</p>
+            <a href="resume.pdf" target="_blank" class="mt-6 inline-block bg-white text-blue-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-200">Download Resume</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <p>I am a first-year B.Tech student in Computer Science Engineering at IIIT Dharwad. Passionate about technology and innovation, I specialize in web development, machine learning, and research-driven projects.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="bg-gray-200 py-16 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8">Experience</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">ML/AI Intern - IISc Bangalore</h3>
+                        <p class="text-gray-700">December 2024 - Present</p>
+                        <p>Worked on a GoK DULT project, enhancing urban mobility solutions using ML models.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Research Intern - Vishwakosha</h3>
+                        <p class="text-gray-700">Fall 2024</p>
+                        <p>Redesigned and improved the Vishwakosha website for better accessibility and user experience.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Web Development Intern - Oasis Infobyte</h3>
+                        <p class="text-gray-700">October 2024 - November 2024</p>
+                        <p>Developed responsive web pages using modern web technologies like HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold mb-8">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Dynamic API for NoSQL Query</h3>
+                    <p class="text-gray-700">Developed an API for MongoDB supporting upsert operations and flexible data handling.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Binary Classification Web App</h3>
+                    <p class="text-gray-700">Built a machine learning-powered web app for binary classification using Streamlit.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Health Hub 360</h3>
+                    <p class="text-gray-700">Developed a healthcare platform with appointment booking and inventory management.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-200 py-16 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+                <p class="mb-4">Feel free to reach out for collaborations or queries:</p>
+                <ul>
+                    <li>Email: <a href="mailto:arnav.angarkar20@gmail.com" class="text-blue-700">arnav.angarkar20@gmail.com</a></li>
+                    <li>GitHub: <a href="https://github.com/arnavballincode" target="_blank" class="text-blue-700">arnavballincode</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/arnav-angarkar" target="_blank" class="text-blue-700">arnav-angarkar</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            &copy; 2024 Arnav Angarkar. All rights reserved.
         </div>
-
-        <!-- Contact Me -->
-        <div class="dropdown">
-            <button class="dropdown-btn" onclick="location.href='contact.html'">Contact Me</button>
-        </div>
-
-        <!-- Social Media -->
-        <div class="dropdown">
-            <button class="dropdown-btn" onclick="location.href='social.html'">Social Media</button>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2024 Arnav Angarkar. All rights reserved.</p>
-</footer>
-
+    </footer>
 </body>
 </html>
