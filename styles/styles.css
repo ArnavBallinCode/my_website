@@ -1,0 +1,46 @@
+/* Tailwind CSS doesn't require custom styles for basic setups as it is utility-based. */
+/* Add this CSS file only if you want to extend Tailwind's default configuration or include custom styles. */
+
+/* Example of extending Tailwind styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Classes */
+.custom-button {
+    @apply bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition;
+}
+
+.custom-card {
+    @apply bg-white shadow-lg p-6 rounded-lg hover:shadow-xl transition dark:bg-gray-800 dark:text-white;
+}
+
+.custom-section {
+    @apply py-16 px-6 bg-gray-100 dark:bg-gray-900;
+}
+
+.header {
+    @apply bg-blue-900 text-white dark:bg-gray-800;
+}
+
+.footer {
+    @apply bg-blue-900 text-white py-6 dark:bg-gray-800;
+}
+
+.dark-toggle {
+    @apply cursor-pointer p-2 text-lg rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.5s ease-in-out;
+}
