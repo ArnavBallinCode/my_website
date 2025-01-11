@@ -3,6 +3,17 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Smooth transition for section fade-in */
+.custom-section {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Fade-in effect when section comes into view */
+.custom-section.fade-in {
+    opacity: 1;
+}
+
 /* Custom section padding and spacing */
 .custom-section {
     padding: 4rem 2rem;
@@ -93,4 +104,9 @@ nav a:hover {
 
 .dark .footer {
     background-color: #2d3748; /* Dark footer background */
+}
+
+/* Ensuring text is readable in dark mode */
+.dark .text-gray-800, .dark .text-gray-700 {
+    color: #000; /* Changing grey text to black */
 }
