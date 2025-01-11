@@ -1,49 +1,16 @@
-/* Smooth transition for dark mode toggle */
-.transition-colors {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Smooth transition for section fade-in */
-.custom-section {
+/* Full Screen Section Style */
+.section {
+    height: 100vh;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease-out;
 }
 
-/* Fade-in effect when section comes into view */
-.custom-section.fade-in {
+/* Fade-in effect */
+.fade-in {
     opacity: 1;
 }
 
-/* Custom section padding and spacing */
-.custom-section {
-    padding: 4rem 2rem;
-    margin-bottom: 4rem;
-}
-
-/* Smooth transition for card hover effects */
-.custom-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.custom-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Dark mode customizations */
-.dark .custom-card {
-    background: #2D3748; /* Dark background for cards */
-    color: #CBD5E0; /* Light text for readability */
-}
-
-.dark .custom-card:hover {
-    background: #4A5568; /* Slightly lighter dark background */
-}
-
+/* Dark Mode Toggle Button */
 .dark-toggle {
     background: none;
     border: none;
@@ -54,59 +21,35 @@
     margin-left: 1rem;
 }
 
-/* Hero section styles */
-.hero-section {
-    background-color: #2b6cb0;
-    color: white;
-    padding: 5rem 2rem;
-    text-align: center;
-    transition: background-color 0.3s ease;
+/* Smooth Body Transition for Dark Mode */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.hero-section .btn-resume {
-    background-color: white;
-    color: #3182ce;
-    padding: 12px 25px;
-    border-radius: 5px;
+/* Adjust text color in dark mode */
+body.dark .text-gray-800 {
+    color: #CBD5E0;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* Make the text color dark enough in light mode and light enough in dark mode */
+body.dark .text-gray-800 {
+    color: #1A202C;
+}
+
+/* Section-specific text styles */
+section h2 {
+    font-size: 3rem;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-.hero-section .btn-resume:hover {
-    background-color: #e2e8f0;
-}
-
-/* Footer styles */
-footer {
-    background-color: #2b6cb0;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-/* Navigation styles */
-nav a {
-    text-decoration: none;
+section p {
+    font-size: 1.5rem;
     color: inherit;
-    padding: 5px 12px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #4c51bf;
-    color: white;
-}
-
-.dark .hero-section {
-    background-color: #2d3748; /* Darker background for hero section */
-}
-
-.dark .footer {
-    background-color: #2d3748; /* Dark footer background */
-}
-
-/* Ensuring text is readable in dark mode */
-.dark .text-gray-800, .dark .text-gray-700 {
-    color: #000; /* Changing grey text to black */
 }
