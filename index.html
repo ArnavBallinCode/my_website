@@ -6,7 +6,7 @@
     <title>Arnav Angarkar - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Toggle dark mode
+        // Toggle dark mode function
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
         }
@@ -23,12 +23,13 @@
             margin-bottom: 4rem;
         }
 
+        /* Smooth transition for card hover effects */
         .custom-card {
             background: #fff;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
         }
 
         .custom-card:hover {
@@ -36,6 +37,7 @@
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
         }
 
+        /* Dark mode customizations */
         .dark .custom-card {
             background: #2D3748; /* Dark background for cards */
             color: #CBD5E0; /* Light text for readability */
@@ -54,9 +56,62 @@
             padding: 0;
             margin-left: 1rem;
         }
+
+        /* Hero section styles */
+        .hero-section {
+            background-color: #2b6cb0;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-section .btn-resume {
+            background-color: white;
+            color: #3182ce;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-section .btn-resume:hover {
+            background-color: #e2e8f0;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #2b6cb0;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Navigation styles */
+        nav a {
+            text-decoration: none;
+            color: inherit;
+            padding: 5px 12px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4c51bf;
+            color: white;
+        }
+
+        .dark .hero-section {
+            background-color: #2d3748; /* Darker background for hero section */
+        }
+
+        .dark .footer {
+            background-color: #2d3748; /* Dark footer background */
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors">
+
     <header class="header py-6">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">Arnav Angarkar</h1>
@@ -72,10 +127,10 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="bg-blue-700 text-white py-20 text-center dark:bg-gray-800">
+        <section class="hero-section transition-colors">
             <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
             <p class="text-xl">Aspiring Computer Scientist | Web Developer | AI Enthusiast</p>
-            <a href="resume.pdf" target="_blank" class="mt-6 inline-block bg-white text-blue-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-200 dark:bg-gray-900 dark:text-white">Download Resume</a>
+            <a href="resume.pdf" target="_blank" class="btn-resume mt-6">Download Resume</a>
         </section>
 
         <!-- About Section -->
@@ -141,10 +196,11 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer transition-colors">
         <div class="container mx-auto text-center">
             &copy; 2024 Arnav Angarkar. All rights reserved.
         </div>
     </footer>
+
 </body>
 </html>
